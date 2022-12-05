@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      width: auto;
+      height: auto;
+      display: flex;
+      padding: 0;
+      margin: 0;
+      background-color: burlywood;
+    }
+    .container {
+      margin-left: 170px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 30px;
+    }
+    .red {
+      border: 2px dotted black;
+      margin-right: 30px;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: red;
+      color: white;
+    }
+    .blue {
+      border: 2px dotted black;
+      margin-right: 30px;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: blue;
+      color: white;
+    }
+    .green {
+      border: 2px dotted black;
+      margin-right: 30px;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: green;
+      color: white;
+      text-shadow: 2px 2px 2px 2px black;
+    }
+    .black {
+      border: 2px dotted black;
+      margin-right: 30px;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      color: white;
+    }
+    .btn {
+      margin-top: 300px;
+      margin-left: -560px;
+      color: chartreuse;
+      background-color: black;
+      border-radius: 20px;
+      font-size: 40px;
+      padding: 10px;
+    }
+    @media (max-width: 400px) {
+      body {
+        display: flex;
+      }
+      .container {
+        grid-template-columns: 1fr 1fr;
+        margin-left: 15px;
+        column-gap: 3px;
+        margin-bottom: 30px;
+      }
+      .sq {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+      }
+      .btn {
+        margin-top: 380px;
+        margin-left: -200px;
+        color: chartreuse;
+        background-color: black;
+        border-radius: 10px;
+        font-size: 30px;
+        padding: 10px;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div id="red" class="red sq">red</div>
+      <div id="blue" class="blue sq">blue</div>
+      <div id="green" class="green sq">green</div>
+      <div id="black" class="black sq">black</div>
+    </div>
+    <button onclick="mix()" class="btn">mix</button>
+
+    <script>
+      const mix = () => {
+        let elem1 = document.getElementById("red");
+        elem1.style.background = "pink";
+        elem1.innerHTML = "pink";
+        elem1.style.color = "black";
+        let elem2 = document.getElementById("blue");
+        elem2.innerHTML = "yellow";
+        elem2.style.color = "black";
+        elem2.style.background = "yellow";
+        let elem3 = document.getElementById("green");
+        elem3.innerHTML = "purple";
+        elem3.style.color = "white";
+        elem3.style.background = "purple";
+        let elem4 = document.getElementById("black");
+        elem4.innerHTML = "white";
+        elem4.style.color = "black";
+        elem4.style.background = "white";
+      };
+    </script>
+  </body>
+</html>
